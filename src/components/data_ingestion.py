@@ -61,5 +61,7 @@ if __name__ == '__main__':
     train_arr, test_arr, _ = data_transformer.initiate_data_transformer(train_data, test_data)
         
     model_trainer = ModelTrainer()
-    model, score =  model_trainer.initiate_model_trainer(train_arr, test_arr)
+    report, model, score =  model_trainer.initiate_model_trainer(train_arr, test_arr)
+    print(report)
     print(f"Best Model: {model} \n r2_score: {score}")
+    
